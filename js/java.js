@@ -5,7 +5,7 @@ var jsonText = '{"estudiantes" : [' +
 '{"codigo" : "003"     ,"nombre" : "Isabella"     ,"nota" : 7},' +
 '{"codigo" : "004"     ,"nombre" : "Liz"     ,"nota" : 9},' +
 '{"codigo" : "005"     ,"nombre" : "Claudio"     ,"nota" : 8},' +
-'{"codigo" : "006"     ,"nombre" : "Cecilia"     ,"nota" : 3},' +
+'{"codigo" : "006"     ,"nombre" : "Maite"     ,"nota" : 3},' +
 '{"codigo" : "007"     ,"nombre" : "Cesar"     ,"nota" : 5},' +
 '{"codigo" : "008"     ,"nombre" : "Analia"     ,"nota" : 8},' +
 '{"codigo" : "009"     ,"nombre" : "Leonel"     ,"nota" : 4},' +
@@ -25,4 +25,21 @@ function leerJSON (json) {
 }
 function mostrarAlumnos(){
   leerJSON(jsObj);
+}
+
+<!-- Calcular nota promedio -->
+function promedio(json){
+  var out = "La nota promedio es ";
+  var aux = json.estudiantes[0].nota;
+  var sumar = 0;
+  var promed = 0;
+  for (i = 0; i < json.estudiantes.length; i++) {
+    aux = json.estudiantes[i].nota;
+    sumar = sumar + aux;
+    promed = sumar / 10;
+  }
+  document.getElementById("npromedio").innerHTML = out + promed;
+}
+function mostrarNotaPromedio() {
+  promedio(jsObj);
 }

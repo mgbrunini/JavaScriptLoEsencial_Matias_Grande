@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script type="text/javascript" src="js/java.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>JavaScript: Lo esencial</title>
   </head>
   <body>
-      <h1>Notas estudiantes</h1>
-
-      <button onclick="mostrarAlumnos()">Mostrar estudiantes</button>
-      <button onclick="">Calcular nota promedio</button>
-      <p id="alumnos"></p>
-      <p id=""></p>
-      <button onclick="">Estudiante con mayor nota</button>
-      <button onclick="">Estudiante con menor nota</button>
-      <p id=""></p>
-      <p id=""></p>
+      <h1 align="center">Notas estudiantes</h1>
+      <table align="center" style="width:90%">
+        <tr>
+          <th><button onclick="mostrarAlumnos()">Mostrar estudiantes</button></th>
+          <th><button onclick="mostrarNotaPromedio()">Calcular nota promedio</button></th>
+          <th><button onclick="">Estudiante con mayor nota</button></th>
+          <th><button onclick="">Estudiante con menor nota</button></th>
+        </tr>
+        <tr>
+          <td><p id="alumnos"></p></td>
+          <td><p id="npromedio"></p></td>
+          <td><p id=""></p></td>
+          <td><p id=""></p></td>
+        </tr>
+      </table>
 
   <!--Script bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
