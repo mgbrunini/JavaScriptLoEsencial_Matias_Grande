@@ -10,3 +10,19 @@ var jsonText = '{"estudiantes" : [' +
 '{"codigo" : "008"     ,"nombre" : "Analia"     ,"nota" : 8},' +
 '{"codigo" : "009"     ,"nombre" : "Leonel"     ,"nota" : 4},' +
 '{"codigo" : "010"     ,"nombre" : "Dante"     ,"nota" : 10}' + ']}';
+
+<!-- Mostrar estudiantes-->
+var jsObj = JSON.parse(jsonText);
+function leerJSON (json) {
+  var out = "--------- Estudiantes ---------<br>";
+  var i;
+  for (i = 0; i < json.estudiantes.length; i++) {
+    out += "Codigo: " + json.estudiantes[i].codigo + " - " +
+    "Nombre: " + json.estudiantes[i].nombre + " - " +
+    "Nota: " + json.estudiantes[i].nota + "<br>";
+  }
+  document.getElementById("alumnos").innerHTML = out;
+}
+function mostrarAlumnos(){
+  leerJSON(jsObj);
+}
